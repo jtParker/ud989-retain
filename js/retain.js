@@ -20,7 +20,8 @@ $(function(){
     var octopus = {
         addNewNote: function(noteStr) {
             model.add({
-                content: noteStr
+                content: noteStr,
+                date: date.now()
             });
             view.render();
         },
@@ -35,7 +36,7 @@ $(function(){
         }
     };
 
-
+// TODO: add date to notes notes arent displaying
     var view = {
         init: function() {
             this.noteList = $('#notes');
